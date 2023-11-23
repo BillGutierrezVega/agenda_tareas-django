@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block contents %}
+    <h1>Cancion Guardada</h1>
+    <ul>
+        
+        {% for can in cancion %}
+            <li><a href="{% url 'detalles_cancion' can.id %}">{{can.nombre}}</a></li>
+        {% endfor %}
+            
+    </ul>
+    <a href="{% url 'canciones' %}">volver</a>
+
+{% endblock contents %}

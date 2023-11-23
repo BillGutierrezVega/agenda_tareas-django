@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+
+{% block contents %}
+    <h3>Detalles del Cliente</h3>
+    <hr>
+    <p>Nombre: {{ cliente.nombre }}</p>
+    <p>Edad: {{ cliente.edad }}</p>
+    <p>DNI: {{ cliente.dni }}</p>
+    <!-- Agrega más detalles según sea necesario -->
+    <a href="{% url 'cliente_confirmado' %}">Volver a la lista de clientes</a>
+{% endblock contents %}

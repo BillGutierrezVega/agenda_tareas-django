@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+<h1>Datos guardados</h1>
+{% block contents %}
+    <h3>Lista de playlists</h3>
+    <ul>
+        {% for playa in play %}
+            <li>{{playa.nombre}} - {{playa.cliente}}</li>
+            <ul>
+                {% for cancion in playa.cancion.all %}
+                    <li>{{ cancion.nombre }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+{% endblock contents %}

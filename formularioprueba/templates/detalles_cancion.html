@@ -1,0 +1,9 @@
+{% extends 'layouts/base.html' %}
+
+{% block contents %}
+    <h3>Detalles de la cancion</h3>
+    <hr>
+    <p>Nombre: {{ cancion.nombre }}</p>
+    <p>letra: {{ cancion.letras }}</p>
+    <a href="{% url 'canciones_confirmacion' %}">Volver a la lista de canciones</a>
+{% endblock contents %}

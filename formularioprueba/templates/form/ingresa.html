@@ -1,0 +1,10 @@
+<form action="{% url 'cliente' %}" method="POST">
+    {% csrf_token %}
+    <label for="">Nombre: </label>
+    <input type="text" name="nombre" placeholder="Ingresa tu nombre">
+    <label for="edad">Edad: </label>
+    <input type="number" name="edad" placeholder="Ingresa tu edad">
+    <label for="dni">Dni: </label>
+    <input type="text" name="dni" placeholder="Ingresa tu dni">
+    <button type="submit">Enviar</button>
+</form>
