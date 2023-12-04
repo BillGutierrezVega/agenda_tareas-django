@@ -1,0 +1,13 @@
+
+<form action="{% url 'goal' %}" method="POST">
+    {% csrf_token %}
+    <h2>formulario</h2>
+
+    <label for="name2">Nombre: </label>
+    <input type="text" name="name2" placeholder="Escriba su nombre..."><br><br>
+    
+    <label for="coment">Comentarios</label><br>
+    <textarea name="coment" id="coment" cols="30" rows="10" placeholder="Escriba un comentario..."></textarea><br>
+    
+    <button type="submit">Enviar</button>
+</form>

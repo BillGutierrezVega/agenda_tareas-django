@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Datos guardados</h2>
+    <h3>Tu nombre es: {{name}}</h3>
+
+    <h2>Lista de personas</h2>
+    <ul>
+        
+        {% for lis in lista %}
+            <li>{{lis}}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <a href="{% url 'form' %}">Volver</a>
+</body>
+</html>

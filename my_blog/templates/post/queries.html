@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>todos los autores</h1>
+
+    <h3>Buscando get</h3>
+    <ul>
+        
+        {% for wo in woman %}
+            <li>{{wo}}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h3>Filtramos los ids menores iguales a 15</h3>
+    <ul>
+        
+        {% for filt in filter2 %}
+            <li>{{filt}}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h3>conjunto ordenado</h3>
+    <ul>
+        
+        {% for orden in ordenados %}
+            <li>{{orden.email}}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h3>Usando ofset para saltar valores</h3>
+    <ul>
+        
+        {% for of in ofset %}
+            <li>{{of}}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h3>solo un autor: {{author.email}}</h3>
+
+    <h3>Bueno busquemos a melissa: </h3>
+    <ul>
+        {% for elem in filtrado %}
+            <li>{{ elem.name }} | {{elem.email}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Limitando a 10 consultas</h3>
+    <ul>
+        
+        {% for lim in limit %}
+            <li>{{lim.email}}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h3>Realmente todos</h3>
+    <ul>
+        {% for author in authors %}
+            <li>{{author.name}} ({{author.email}})</li>
+        {% endfor %}
+    </ul>
+    <h3>Total de autores: {{authors | length}}</h3>
+</body>
+</html>

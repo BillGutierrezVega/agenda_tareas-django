@@ -1,0 +1,58 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Inicio
+{% endblock titulo %}
+
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <img src="{% static 'images/iglesia1.jpg' %}" alt="Imagen 1">
+        <div class="card-content">
+            <h3>Titulo de la Tarjeta 1</h3>
+            <p>Descripción corta del contenido de la tarjeta.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/iglesia2.jpg' %}" alt="Imagen 2">
+        <div class="card-content">
+            <h3>Titulo de la Tarjeta 2</h3>
+            <p>Otra descripción corta del contenido de la tarjeta.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/iglesia3.jpg' %}" alt="Imagen 2">
+        <div class="card-content">
+            <h3>Titulo de la Tarjeta 2</h3>
+            <p>Otra descripción corta del contenido de la tarjeta.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/iglesia4.jpg' %}" alt="Imagen 2">
+        <div class="card-content">
+            <h3>Titulo de la Tarjeta 2</h3>
+            <p>Otra descripción corta del contenido de la tarjeta.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/iglesia5.jpg' %}" alt="Imagen 2">
+        <div class="card-content">
+            <h3>Titulo de la Tarjeta 2</h3>
+            <p>Otra descripción corta del contenido de la tarjeta.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/iglesia6.jpg' %}" alt="Imagen 2">
+        <div class="card-content">
+            <h3>Titulo de la Tarjeta 2</h3>
+            <p>Otra descripción corta del contenido de la tarjeta.</p>
+        </div>
+    </div>
+
+    <!-- Puedes agregar más tarjetas según sea necesario -->
+
+</div>
+{% endblock content %}

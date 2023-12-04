@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    {% block estilos %}{% endblock estilos %}
+        
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+
+    <header>
+        {% include 'layouts/partials/menu.html' %}
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    {% include 'layouts/partials/footer.html' %}
+
+    {% block scripts %}{% endblock scripts %}
+
+</body>
+</html>

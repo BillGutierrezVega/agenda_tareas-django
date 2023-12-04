@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.card {
+    width: 50%;
+}
+
+.card-header {
+    background-color: #007bff; /* Color similar al botón "Enviar" */
+    color: white; /* Texto en color blanco */
+    font-size: 1.5rem; /* Tamaño del texto del título */
+    text-align: center; /* Centrar el texto del título */
+}
