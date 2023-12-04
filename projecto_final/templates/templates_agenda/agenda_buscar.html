@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+    Búsqueda de contactos
+{% endblock title %}
+
+
+{% block contenido %}
+    <h1>Buscar contactos</h1>
+    <form action="{% url 'agenda_buscar' %}" method="POST">
+        {% csrf_token %}
+        {{ formulario_busqueda }}
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Lista de coincidencias</h2>
+    <ul>
+        
+        {% for encon in encontrados %}
+            <li>{{ encon }} - {{ encon.celular }}</li>
+        {% endfor %}
+            
+    </ul>
+{% endblock contenido %}
+    

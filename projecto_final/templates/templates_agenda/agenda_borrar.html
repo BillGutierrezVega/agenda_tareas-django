@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+    Eliminar contactos
+{% endblock title %}
+
+
+{% block contenido %}
+    <h1>Elimina contactos</h1>
+    <form action="{% url 'agenda_borrar' %}" method="POST">
+        {% csrf_token %}
+        {{ form_borrar }}
+        <button type="submit">Enviar</button>
+    </form>
+
+    {{ mensaje }}
+{% endblock contenido %}
+    

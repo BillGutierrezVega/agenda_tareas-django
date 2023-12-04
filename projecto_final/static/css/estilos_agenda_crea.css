@@ -1,0 +1,47 @@
+/* estilos_agenda_crea.css */
+
+body {
+    background-color: aliceblue;
+}
+
+.card {
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilo para los campos del formulario */
+form input,
+form textarea {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para el botón del formulario */
+form button {
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cambia el color del botón al pasar el ratón sobre él */
+form button:hover {
+    background-color: #0056b3;
+}

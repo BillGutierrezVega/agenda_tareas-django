@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+    Lista de contactos
+{% endblock title %}
+
+
+{% block contenido %}
+    <h1>Lista de contactos</h1>
+    <ul>
+        
+        {% for lis in lista %}
+            <li>{{ lis }}</li>
+        {% endfor %}
+            
+    </ul>
+{% endblock contenido %}
+    

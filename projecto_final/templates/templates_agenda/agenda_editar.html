@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+    Editar contactos
+{% endblock title %}
+
+
+{% block contenido %}
+    <h1>Editar contactos</h1>
+    <form action="{% url 'agenda_editar' %}" method="POST">
+        {% csrf_token %}
+        {{ formulario_busqueda }}
+        <button type="submit">Enviar</button>
+    </form>
+
+    <form action="{% url 'agenda_editar' %}" method="POST">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock contenido %}
+    
