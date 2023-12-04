@@ -1,29 +1,38 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 
-
 {% block link %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/estilos_tarea_crea.css' %}">
 {% endblock link %}
-    
 
 {% block title %}
     Crear tarea
 {% endblock title %}
-    
 
 {% block contenido %}
-    <div class="card">
-        <div class="card-body">
-            <h1>Crear tarea</h1>
-            {{ mensaje }}
-            <form action="{% url 'crear_tarea' %}" method="POST">
-                {% csrf_token %}
-                {{ formulario.as_p }}
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Crear tarea</h1>
+                {{ mensaje }}
+                <form action="{% url 'crear_tarea' %}" method="POST">
+                    {% csrf_token %}
+                    {{ formulario.as_p }}
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h1>Lista de tareas</h1>
+                <ul>
+                    {% for tarea in lista_tareas %}
+                        <li>{{ tarea }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock contenido %}
-    

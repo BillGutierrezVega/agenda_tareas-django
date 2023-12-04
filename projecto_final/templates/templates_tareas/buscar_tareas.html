@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+    Buscar tareas
+{% endblock title %}
+    
+
+{% block link %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock link %}
+    
+
+
+{% block contenido %}
+    <div>
+        <div>
+            {{ mensaje }}
+            <form action="{% url 'buscar_tareas' %}" method="POST">
+                {% csrf_token %}
+                {{ formulario }}
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div>
+            <h2>Resultados de la busqueda</h2>
+            <ul>
+                {% for busco in busqueda %}
+                    <li>{{ busco }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock contenido %}
+    

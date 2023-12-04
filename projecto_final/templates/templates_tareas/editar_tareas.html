@@ -1,30 +1,36 @@
 {% extends 'layouts/base.html' %}
+
 {% load static %}
 
+
 {% block title %}
-    Editar contactos
+    Editar tareas
 {% endblock title %}
+    
 
 {% block link %}
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/estilos_agenda_editar.css' %}">
 {% endblock link %}
+    
+
 
 {% block contenido %}
-    <div class="card">
-        <div class="card-body">
-            <h1>Editar contactos</h1>
-            <form action="{% url 'agenda_editar' %}" method="POST">
+    <div>
+        <div>
+            {{ mensaje }}
+            <form action="{% url 'editar_tareas' %}" method="POST">
                 {% csrf_token %}
-                {{ formulario_busqueda }}
+                {{ formulario_buscar }}
                 <button type="submit">Enviar</button>
             </form>
-
-            <form action="{% url 'agenda_editar' %}" method="POST">
+        </div>
+        <div>
+            <form action="{% url 'editar_tareas' %}" method="POST">
                 {% csrf_token %}
-                {{ formulario.as_p }}
+                {{ tareas.as_p }}
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
 {% endblock contenido %}
+    

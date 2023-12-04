@@ -26,10 +26,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="tareasDropdown">
                         <li><a class="dropdown-item" href="{% url 'crear_tarea' %}">Crear tareas</a></li>
-                        <li><a class="dropdown-item" href="#">Borrar tareas</a></li>
-                        <li><a class="dropdown-item" href="#">Editar tareas</a></li>
-                        <li><a class="dropdown-item" href="#">Listar tareas</a></li>
-                        <li><a class="dropdown-item" href="#">Buscar tareas</a></li>
+                        <li><a class="dropdown-item" href="{% url 'borrar_tareas' %}">Borrar tareas</a></li>
+                        <li><a class="dropdown-item" href="{% url 'editar_tareas' %}">Editar tareas</a></li>
+                        <li><a class="dropdown-item" href="{% url 'buscar_tareas' %}">Buscar tareas</a></li>
                     </ul>
                 </li>
             </ul>

@@ -25,3 +25,7 @@ class TareaForm(forms.ModelForm):
         if len(nombre) > 150:
             raise forms.ValidationError('Nombre muy grande, debe tener 10 caracteres o menos.')
         return nombre
+
+
+class BusquedaForm(forms.Form):
+    nombre = forms.CharField(max_length=150)
